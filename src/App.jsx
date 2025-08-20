@@ -1,6 +1,8 @@
 import Dice from "./pages/Dice";
 import Home from "./pages/Home"
 import Appbar from "./pages/Appbar"
+import Mines from"./pages/Mines";
+import Hilo from "./pages/Hilo"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
@@ -16,6 +18,8 @@ export default function App(){
  <Routes>
 <Route path="/" element={<Home></Home>} > </Route>
 <Route path="/Dice" element={ <Dice></Dice>} > </Route>
+<Route path="/Mines" element={<Mines></Mines>}> </Route>
+<Route path="/hilo" element={<Hilo></Hilo>}> </Route>
 
  </Routes>
 

@@ -11,10 +11,18 @@ const Home = () => {
         <Loader> </Loader>
         <div className="bg-[#0f212e] max-w-screen-lg m-auto rounded-lg overflow-hidden max-h-[85vh] h-full flex sm:flex-row flex-col items-center justify-evenly ">
 
-            <Link to="/Dice"
+           
+
+             <Link className="rounded-xl overflow-hidden hover:translate-y-2 cursor-pointer duration-300 sm:auto " to="/Mines"> <img className="w-55 h-64 object-cover rounded-2xl shadow-lg" src={mineThumbnail}></img> 
+             </Link>
+
+              <Link to="/Dice"
             className="rounded-xl overflow-hidden hover:translate-y-2 cursor-pointer duration-300 sm:w-auto w-36"
             >
-             <img src= { diceThumbnail}></img> </Link>
+             <img className="w-55 h-64 object-cover rounded-2xl shadow-lg" src= { diceThumbnail}></img> </Link>
+
+              <Link className="rounded-xl overflow-hidden hover:translate-y-2 cursor-pointer duration-300 sm:auto " to="/hilo"> <img className="w-55 h-64 object-cover rounded-2xl shadow-lg" src={hilothumbnail}></img> 
+             </Link>
              
                         </div> 
             </div>)

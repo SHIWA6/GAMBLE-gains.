@@ -26,7 +26,7 @@ export default function Dice() {
   const [totalAmount, setTotalAmount] = useState(1000);
   const [isBetStarted, setisBetStarted] = useState(false);
   const [BetAmount, SetBetAmount] = useState("");
-  const [mul, setMul] = useState((2).toFixed(4));
+  const [mul, setMul] = useState((1.1).toFixed(4));
   const [betResultArray, setBetResultArray] = useState([]);
   const [rollvalue, setRollValue] = useState(10);
   const [showDice, setShowDice] = useState(false);
