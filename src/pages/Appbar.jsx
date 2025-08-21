@@ -1,41 +1,53 @@
 import React from "react";
 import avatar from "../assets/avatar.svg";
 import ruppee from "../assets/ruppee.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
+const Appbar = () => {
+  return (
+    <div className="sticky top-0 left-0 right-0 z-50">
+      {/* Outer Glow Line */}
+      
 
-const Appbar=()=> {
+      <div className="bg-gradient-to-r from-[#0f2027]/95 via-[#203a43]/95 to-[#2c5364]/95 shadow-lg shadow-black/40 backdrop-blur-xl border-b border-white/10">
+        <div className="max-w-screen-xl m-auto flex justify-between items-center py-3 px-6">
+          
+          {/* Logo */}
+          <Link to={"/"}>
+            <h1 className="text-white flex items-center gap-3 font-pacifico font-medium text-3xl px-3 hover:text-pink-400 transition-colors duration-300">
+              Satta
+              <span>
+                <img
+                  className="w-12 h-12 rounded-full border-2 border-white/30 shadow-lg hover:scale-110 hover:shadow-pink-500/40 transition-all duration-300"
+                  src={avatar}
+                  alt="avatar"
+                />
+              </span>
+            </h1>
+          </Link>
 
+          {/* Center Text */}
+          <div className="hidden md:flex text-white text-lg font-semibold tracking-wide">
+            <div className="relative group">
+              <div className="bg-white/10 backdrop-blur-lg px-6 py-2 rounded-full shadow-md border border-white/10 flex items-center gap-2 transition-all duration-300 group-hover:scale-105 group-hover:shadow-pink-500/40">
+                <span>Made with ❤️ by Shiva</span>
+              </div>
+              {/* Underline Glow */}
+              <div className="absolute left-0 right-0 -bottom-1 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-full"></div>
+            </div>
+          </div>
 
-    return(
-<div className="bg-[#1a2c38] shadow-md shadow-[#14222b] z-50 sticky top-0 left-0 right-0">
-    <div className="py-2 px-3 max-w-screen-xl m-auto flex justify-between items-center">
-
-<Link to={"/"}>
-
-
-<h1 className="text-white flex gap-3 font-pacifico px-8 font-medium text-3xl hover:text-pink-400 s"> Satta <span> <img className="w-10 h-10  rounded-full  " src={avatar} alt="avatar"></img> </span> </h1>
-
-</Link>
-
-<div className=" flex justify-center text-white text-xl font-bold">
-    <div className=" bg-[#0e202c] flex items-center gap-2 px-1 rounded-s hover:bg-gradient-to-t from-[#3808e622] to-[#8888]">
-        <span> Made with ❤️ by Shiva </span>
-        
+          {/* Wallet Button */}
+          <button className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full shadow-lg hover:shadow-pink-400/40 hover:scale-105 transition-all duration-300 overflow-hidden">
+            <span className="relative z-10">Wallet</span>
+            {/* Shiny Light Effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+          </button>
         </div>
-    
-         </div>
-
-         <button className="bg-[#1674e3] py-3 px-4 rounded hover:bg-gradient-to-b from-[#eb0b7b] to-[#0e1b27]">Wallet</button>
-
+      </div>
     </div>
-    
-</div>
-
-
-    );
-
-    
+  );
 };
 
 export default Appbar;
+
